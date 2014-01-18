@@ -1,0 +1,23 @@
+<module rename-to='platformer'>
+
+	<inherits name='forplay.ForPlay' />
+
+	<inherits name="com.google.gwt.inject.Inject" />
+
+	<inherits name='com.anygine.game.platformer.AnyginePlatformerClient' />
+
+	<inherits name='com.anygine.game.platformer.common.AnyginePlatformerCommon' />
+
+	<inherits name='com.anygine.core.common.AnygineCoreCommon' />
+
+	<inherits name='com.anygine.core.client.AnygineCoreClient' />
+	
+	<inherits name="org.lutzmann.gwt.cometd.gwtcometd"/>
+
+	<source path='client' />
+
+	<public path="resources" />
+
+	<entry-point class='com.anygine.game.platformer.client.PlatformerHtml' />
+
+</module>
