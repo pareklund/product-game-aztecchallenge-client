@@ -1,5 +1,18 @@
 package com.anygine.game.platformer.module;
 
+import com.anygine.common.input.InputReader;
+import com.anygine.common.input.PlayerInputReader;
+import com.anygine.core.common.client.Profile;
+import com.anygine.core.common.client.api.*;
+import com.anygine.core.common.client.domain.EntityFactoryImpl;
+import com.anygine.core.common.client.domain.EntityServiceImpl;
+import com.anygine.core.common.client.domain.EntityStorageImpl;
+import com.anygine.core.common.client.domain.JsonWritableFactoryImpl;
+import com.google.inject.AbstractModule;
+import playn.core.Assets;
+import playn.core.Game;
+import playn.core.PlayN;
+
 public class PlatformerClientModule extends AbstractModule {
 
 	@Override
@@ -23,7 +36,7 @@ public class PlatformerClientModule extends AbstractModule {
     Assets assetManager = PlayN.assets();
 		bind(Assets.class).toInstance(assetManager);
     bind(EntityService.class).to(EntityServiceImpl.class);
-    bind(EntityStorage.class).to(EntityStorageImpl.class);    
+    bind(EntityStorage.class).to(EntityStorageImpl.class);
 		requestStaticInjection(GameComponentBase.class);
 	  requestStaticInjection(Profile.class);
 //    requestStaticInjection(JsonWritableBase.class);

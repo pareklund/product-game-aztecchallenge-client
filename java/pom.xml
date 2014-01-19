@@ -24,6 +24,7 @@
   
   <modules>
     <module>game-aztecchallenge-client-java</module>
+    <module>game-aztecchallenge-client-java-inject</module>
   </modules>
   
 </project>
